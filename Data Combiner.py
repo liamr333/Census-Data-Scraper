@@ -35,8 +35,6 @@ def get_date(raw_row):
 
 
 
-
-
 # Extract data and append it to 2D array
 
 data = []
@@ -60,8 +58,7 @@ for i in range(len(counties)):
 
 with open("County Employment.csv", "a", newline="") as csv_file:
     csv_writer = csv.writer(csv_file)
-    csv_writer.writerow(["County", "Name", "Labor Force", "Employment",
-                         "Unemployment", "Unemployment Rate"])
+    csv_writer.writerow(["County", "Name", "Labor Force", "Employment", "Unemployment", "Unemployment Rate"])
     csv_writer.writerows(data)
     csv_file.close()
 
